@@ -1,7 +1,7 @@
 #!/bin/bash
 ping -c 1 8.8.8.8 &> /dev/null
 if [ $? -eq 0 ]; then
- 	API_KEY="AIzaSyBsweGCDqlE5sG03zuuiSke94SYsXtoaP0"
+ 	API_KEY="apikey"
 	API_URL="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$API_KEY"
 	if [ -z "$1" ]; then
 	    	echo "Error: No response provided."
