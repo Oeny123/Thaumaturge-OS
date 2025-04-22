@@ -1,0 +1,11 @@
+[Unit]
+Description=Loggs Company Computers
+
+[Service]
+WorkingDirectory=/usr/share/logger/
+ExecStart=/usr/share/logger/venv/bin/python /usr/share/logger/tracker.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+WKDIR="$(pwd)"
+BLDDIR="Thaumaturge"
+
+lb config --binary-images iso-hybrid --mode debian  --architectures amd64 --linux-flavours amd64 --distribution bookworm --debian-installer none --archive-areas "main contrib non-free non-free-firmware" --updates true --security true --cache true --firmware-binary false --firmware-chroot true --iso-application $BLDDIR  --image-name "$BLDDIR" --iso-volume "$BLDDIR-1"
+
+echo "gnome grub-pc isolinux neofetch os-prober squashfs-tools sudo syslinux syslinux-common dkms neofetch zsh git curl wget calamares calamares-settings-debian dbus curl" > $WKDIR/config/package-lists/extrapackages.list.chroot

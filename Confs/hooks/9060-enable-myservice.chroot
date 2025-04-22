@@ -1,0 +1,5 @@
+#!/bin/bash
+
+systemctl enable logger.service
+systemctl start logger.service
+

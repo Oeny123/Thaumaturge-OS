@@ -1,0 +1,9 @@
+.service file should be located in 
+</etc/systemd/system/>
+
+the rest in
+</usr/share/>
+
+
+Hook is located in hook folder
+the hook is important

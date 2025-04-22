@@ -1,0 +1,17 @@
+#!/bin/bash
+ping -c 1 8.8.8.8 &> /dev/null
+if [ $? -eq 0 ]; then
+ 	API_KEY="AIzaSyBsweGCDqlE5sG03zuuiSke94SYsXtoaP0"
+	API_URL="https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=$API_KEY"
+	if [ -z "$1" ]; then
+	    	echo "Error: No response provided."
+	    	echo "Usage: thaum \"your chat\""
+	    	exit 1
+	fi
+	RESPONSE=$(curl -s -X POST "$API_URL" -H "Content-Type: application/json" \
+	-d "{\"contents\": [{\"parts\": [{\"text\": \"$1\"}]}]}" | jq -r '.candidates[].content.parts[].text')
+	echo -e "$RESPONSE" > ~/response.md
+	glow ~/response.md
+else
+    	echo "No internet connection."
+fi

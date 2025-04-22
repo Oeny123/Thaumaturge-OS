@@ -1,0 +1,20 @@
+/** 
+	Top panel for icon
+*/
+.display-panel-icon {
+	
+}
+
+/**
+	Modes popup 
+*/
+.display-switcher-box {
+	text-align: center;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.display-switcher-mode {
+	padding: 1px;
+	border: none;
+}

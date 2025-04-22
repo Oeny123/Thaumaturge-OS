@@ -1,0 +1,36 @@
+---
+componentName:   tos
+welcomeStyleCalamares: true
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 800px,520px
+windowPlacement: center
+
+strings:
+    productName:         Thaumaturge OS
+    shortProductName:    TOS
+    version:             1
+    shortVersion:        1
+    versionedName:       Thaumaturge OS 1
+    shortVersionedName:  TOS 1
+    bootloaderEntryName: Thuamaturge
+    productUrl:          https://debian.org
+    supportUrl:          https://www.debian.org/support
+    knownIssuesUrl:      https://bugs.debian.org
+    releaseNotesUrl:     https://www.debian.org/releases/bookworm/releasenotes
+    donateUrl:           https://www.debian.org
+
+images:
+    productLogo:         "debian-logo.png"
+    productIcon:         "debian-logo.png"
+    productWelcome:      "welcome.png"
+    # productWallpaper:  "wallpaper.png"
+
+slideshow:               "show.qml"
+
+style:
+   sidebarBackground:    "#1b0404"
+   sidebarText:          "#a400e5"
+   sidebarTextSelect:    "#4a188a"
+
+slideshowAPI: 2
