@@ -13,27 +13,7 @@ logs = True
 brave = True
 docker = True
 
-# Logger & Services
-if logs:
 
-    logger_source = "../Confs/tracker/logger"
-    logger_destination = "./config/includes.chroot/usr/share/logger"
-    shutil.copytree(logger_source, logger_destination)
-
-    service_source = "../Confs/tracker/logger.service"
-    service_destination = "./config/includes.chroot/lib/systemd/system/"
-    os.makedirs(service_destination)
-    shutil.copy2(service_source, service_destination)
-
-    symlink_source = "./config/includes.chroot/lib/systemd/system/logger.service"
-    symlink_destination = "./config/includes.chroot/etc/systemd/system/multi-user.target.wants/"
-    os.makedirs(symlink_destination)
-    subprocess.run(["ln", "-s", symlink_source, symlink_destination], check=True)
-
-    hook_source = "../Confs/hooks/9060-enable-myservice.chroot"
-    hook_destination = "./config/hooks/normal/"
-    shutil.copy2(hook_source, hook_destination)
-    
 # Brave
 if brave:
     brave_source = "../Confs/hooks/9040-brave-repo.chroot"
